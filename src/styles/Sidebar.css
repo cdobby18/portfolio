@@ -1,0 +1,21 @@
+.sidebar {
+  background: #111; /* dark gray box */
+  padding: 0.5rem;
+  border-radius: 3px;
+  text-align: center;
+  display: inline-block;
+}
+
+.home-arrow {
+  font-size: 1.2rem;   /* smaller size */
+  color: #ffeb3b;      /* yellow arrow */
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+
+.home-arrow:hover {
+  color: #fff;         /* turn white on hover */
+  transform: scale(1.1); /* smaller hover zoom */
+  cursor: pointer;
+}

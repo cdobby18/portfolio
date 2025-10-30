@@ -1,0 +1,104 @@
+.certification {
+  text-align: center;
+  padding: 100px 40px;
+  background: radial-gradient(circle at top, #0a0a0a, #000);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 1.2s ease both;
+}
+
+/* ✨ Section Title */
+.certification h2 {
+  color: #ffeb3b;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(255, 235, 59, 0.4);
+  position: relative;
+  border: none; /* removes any hard bottom border line */
+}
+
+/* Glowing underline below title */
+.certification h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: #ffeb3b;
+  margin: 15px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 15px #ffeb3b;
+}
+
+/* 🔶 Certifications Grid Layout */
+.certification-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 🏅 Individual Certificate Card */
+.certification-grid a {
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 260px;
+  color: #fff;
+  background: rgba(255, 235, 59, 0.05);
+  border: 1px solid rgba(255, 235, 59, 0.2);
+  padding: 22px 25px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 235, 59, 0.08);
+  backdrop-filter: blur(4px);
+}
+
+/* Hover animation */
+.certification-grid a:hover {
+  color: #000;
+  background: #ffeb3b;
+  box-shadow: 0 0 25px rgba(255, 235, 59, 0.8);
+  transform: translateY(-6px);
+}
+
+/* ✨ Smooth fade animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .certification {
+    padding: 80px 20px;
+  }
+
+  .certification h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  .certification-grid {
+    gap: 20px;
+  }
+
+  .certification-grid a {
+    min-width: 180px;
+    padding: 18px 20px;
+  }
+}
