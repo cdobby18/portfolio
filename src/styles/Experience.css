@@ -1,0 +1,127 @@
+.experience {
+  background: radial-gradient(circle at top, #0a0a0a, #000);
+  color: #f5f5f5;
+  min-height: 100vh;
+  padding: 100px 60px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  animation: fadeInUp 1.2s ease both;
+}
+
+/* ✨ Title */
+.title {
+  font-size: 2.5rem;
+  color: #ffeb3b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-shadow: 0 0 12px rgba(255, 235, 59, 0.4);
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: #ffeb3b;
+  margin: 15px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 15px #ffeb3b;
+}
+
+/* ✨ Grid layout with perfect alignment */
+.experience-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px 40px; /* rows x columns spacing */
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-items: center; /* centers items in their columns */
+}
+
+/* ✨ Card Styling */
+.exp-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 235, 59, 0.15);
+  padding: 30px 25px;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(255, 235, 59, 0.05);
+  transition: all 0.3s ease;
+  text-align: left;
+  backdrop-filter: blur(4px);
+  width: 100%;
+  max-width: 350px; /* keeps cards equal width */
+  min-height: 230px; /* ensures uniform height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.exp-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 235, 59, 0.4);
+  box-shadow: 0 0 25px rgba(255, 235, 59, 0.25);
+  background: rgba(255, 235, 59, 0.05);
+}
+
+.exp-card h3 {
+  color: #ffeb3b;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  text-shadow: 0 0 6px rgba(255, 235, 59, 0.3);
+}
+
+.years {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.exp-card p {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* ✨ Remove that broken centered last card rule */
+.exp-card:last-child {
+  grid-column: auto;
+  justify-self: center;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .experience {
+    padding: 80px 25px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .experience-list {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-card {
+    max-width: 100%;
+    min-height: auto;
+  }
+}
+
+/* ✨ Smooth entry animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

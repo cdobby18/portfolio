@@ -1,0 +1,138 @@
+.profile {
+  padding: 100px 10%;
+  background: radial-gradient(circle at top left, #0a0a0a 0%, #000 100%);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Profile Image --- */
+.profile-image {
+  position: relative;
+}
+
+.profile-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+/* --- Profile Text --- */
+.profile-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.profile-text:hover {
+  border-color: #ffeb3b;
+  box-shadow: 0 0 30px #ffeb3b;
+}
+
+.profile-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+  color: #ffeb3b;
+  letter-spacing: 1px;
+}
+
+.profile-text p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.profile-text .quote {
+  font-style: italic;
+  color: #a3bffa;
+  border-left: 4px solid #ffeb3b;
+  padding-left: 1rem;
+  margin: 2rem 0;
+}
+
+
+
+/* --- Interests Section --- */
+.interests {
+  margin-top: 2rem;
+}
+
+.interests h3 {
+  font-size: 1.3rem;
+  color: #ffeb3b;
+  margin-bottom: 1rem;
+}
+
+.interests ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.interests li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  opacity: 0.9;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.interests li:hover {
+  transform: translateX(6px);
+  color: #ffeb3b;
+}
+
+.interests li::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #ffeb3b;
+  border-radius: 50%;
+  margin-right: 10px;
+  box-shadow: 0 0 10px #ffeb3b;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .profile-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .profile-text {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .interests ul {
+    display: inline-block;
+    text-align: left;
+  }
+}
